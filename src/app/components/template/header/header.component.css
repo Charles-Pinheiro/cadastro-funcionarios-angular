@@ -1,0 +1,38 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #093E64;
+}
+
+.header a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #FFF;
+}
+
+.header .logo {
+    max-height: 52px;
+}
+
+.header .title-group {
+    padding-left: 35px;
+    color: #FFF;
+}
+
+.box-buttons {
+    display: flex;
+    width: 25%;
+    justify-content: space-evenly;
+}
+
+.button {
+    color: #093E64;
+    background-color: #5ab575;
+}
+
+.icon {
+    padding-right: 5px;
+    margin-bottom: 5px;
+}
