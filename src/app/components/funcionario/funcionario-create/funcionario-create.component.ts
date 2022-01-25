@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Funcionario } from 'src/app/model/funcionario.model';
+import { FuncionarioService } from 'src/app/services/funcionario.service';
 
 @Component({
   selector: 'app-funcionario-create',
@@ -7,9 +10,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FuncionarioCreateComponent implements OnInit {
 
-  constructor() { }
+  funcionario: Funcionario = {
+    nome: '',
+    cargo: '',
+    idade: null,
+    salario: null,
+    imgURL: '',
+  }
+
+  constructor(
+    private funcionarioService: FuncionarioService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
   }
 
+  criarFuncionario(): void {
+    this.funcionarioService.create(this.funcionario).subscribe(() => {
+      this.funcionarioService.showMessage('Funcionário registrado!');
+      this.router.navigate(['funcionarios']);
+    })
+  }
+
+  cancel(): void {
+    this.router.navigate(['funcionarios']);
+  }
 }
