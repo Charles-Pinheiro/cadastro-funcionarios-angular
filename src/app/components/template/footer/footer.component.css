@@ -1,0 +1,17 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #E3E1E1;
+}
+
+.footer > span {
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+img {
+    max-height: 42px;
+    margin-top: 10px;
+}
