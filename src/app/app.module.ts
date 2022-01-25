@@ -10,14 +10,18 @@ import { HomeComponent } from './views/home/home.component';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card'
+import { MatCardModule } from '@angular/material/card';
+import { FuncionarioCrudComponent } from './views/funcionario-crud/funcionario-crud.component';
+import { FuncionarioCreateComponent } from './components/funcionario/funcionario-create/funcionario-create.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    FuncionarioCrudComponent,
+    FuncionarioCreateComponent
   ],
   imports: [
     BrowserModule,
