@@ -5,11 +5,11 @@ import { FuncionarioService } from 'src/app/services/funcionario.service';
 import { HeaderService } from 'src/app/services/header.service';
 
 @Component({
-  selector: 'app-funcionario-read-detail',
-  templateUrl: './funcionario-read-detail.component.html',
-  styleUrls: ['./funcionario-read-detail.component.css']
+  selector: 'app-funcionario-delete',
+  templateUrl: './funcionario-delete.component.html',
+  styleUrls: ['./funcionario-delete.component.css']
 })
-export class FuncionarioReadDetailComponent implements OnInit {
+export class FuncionarioDeleteComponent implements OnInit {
 
   funcionario: Funcionario = {
     nome: '',
@@ -17,27 +17,40 @@ export class FuncionarioReadDetailComponent implements OnInit {
     idade: null,
     salario: null,
     imgURL: '',
-  };
+  }
 
   constructor(
     private funcionarioService: FuncionarioService,
     private router: Router,
     private route: ActivatedRoute,
     private headerService: HeaderService
-  ) { 
+  ) {
     headerService.headerData = {
-      title: 'Perfil do Colaborador',
-      icon: 'account_circle',
+      title: 'Remover Colaborador',
+      icon: 'person_remove_alt_1',
     }
-  }
+   }
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
     if (id) {
       this.funcionarioService.readById(+id).subscribe(funcionario => {
         this.funcionario = funcionario;
-      })
+      });
     }
   }
 
+  deletarFuncionario(): void {
+    if (this.funcionario.id) {
+      this.funcionarioService.delete(this.funcionario.id).subscribe(() => {
+        this.funcionarioService.showMessage('Dados deletados!');
+        this.router.navigate(['/funcionarios']);
+      });
+    }
+  }
+
+  cancel(): void {
+    const id = this.route.snapshot.paramMap.get('id');
+    this.router.navigate([`/funcionarios/${id}`]);
+  }
 }

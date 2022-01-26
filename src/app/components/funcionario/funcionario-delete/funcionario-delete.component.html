@@ -1,0 +1,61 @@
+<div>
+  <mat-card class="container mat-elevation-z5">
+    <mat-card-title class="title">Remover Colaborador</mat-card-title>
+    
+    <form >
+      <mat-form-field>
+        <input
+        name="nome"
+        placeholder="Nome"
+        matInput
+        [(ngModel)]="funcionario.nome"
+        disabled
+        >
+      </mat-form-field>
+      <mat-form-field>
+        <input
+        name="cargo"
+        placeholder="Cargo"
+        matInput
+        [(ngModel)]="funcionario.cargo"
+        disabled
+        >
+      </mat-form-field>
+      <mat-form-field>
+        <input
+        name="idade"
+        placeholder="Idade"
+        matInput
+        [(ngModel)]="funcionario.idade"
+        disabled
+        >
+      </mat-form-field>
+      <mat-form-field>
+        <input
+        name="salario"
+        placeholder="Salário (R$)"
+        matInput
+        [(ngModel)]="funcionario.salario"
+        disabled
+        >
+      </mat-form-field>
+      <mat-form-field>
+        <input
+        name="imgURL"
+        placeholder="Imagem de Perfil (URL)"
+        matInput
+        [(ngModel)]="funcionario.imgURL"
+        disabled
+        >
+      </mat-form-field>
+    </form>
+    
+    <button mat-raised-button (click)="deletarFuncionario()" color="warn">
+      Confirmar
+    </button>
+    
+    <button mat-raised-button (click)="cancel()" class="return">
+      Cancelar
+    </button>
+  </mat-card>
+</div>

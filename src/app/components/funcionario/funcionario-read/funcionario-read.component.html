@@ -1,14 +1,13 @@
 <div class="box">
   <h2>Colaboradores:</h2>
   <div class="box-cards">
-    <mat-card class="example-card card-tarefa" *ngFor="let funcionario of funcionarios">
+    <mat-card class="example-card card-funcionario" *ngFor="let funcionario of funcionarios">
       <mat-card-header class="card-header">
         <mat-card-title class="title-card">{{funcionario.nome}}</mat-card-title>
         <mat-card-subtitle class="subtitle-card">{{funcionario.cargo}}</mat-card-subtitle>
       </mat-card-header>
       <div class="box-image">
-        <!-- "../../../../assets/img/Logo-SAT.png" -->
-        <img mat-card-image src={{funcionario.imgURL}} alt="Imagem do Funcionário">
+        <img mat-card-image src="../../../../assets/img/Logo-SAT.png" alt="Imagem do Funcionário">
       </div>
       <mat-card-content>
         <p>
@@ -22,12 +21,6 @@
           <a routerLink="/funcionarios/{{funcionario.id}}" class="done">
             <i class="material-icons">person_outline</i>
           </a>
-          <!-- <a routerLink="/funcionarios" class="edit">
-            <i class="material-icons">edit</i>
-          </a>
-          <a routerLink="/funcionarios" class="delete">
-            <i class="material-icons">delete</i>
-          </a> -->
       </mat-card-actions>
     </mat-card>
   </div>

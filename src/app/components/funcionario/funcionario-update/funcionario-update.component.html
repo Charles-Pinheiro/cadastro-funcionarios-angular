@@ -1,0 +1,56 @@
+<div>
+  <mat-card class="container mat-elevation-z5">
+    <mat-card-title class="title">Editar Dados do Colaborador</mat-card-title>
+    
+    <form >
+      <mat-form-field>
+        <input
+        name="nome"
+        placeholder="Nome"
+        matInput
+        [(ngModel)]="funcionario.nome"
+        >
+      </mat-form-field>
+      <mat-form-field>
+        <input
+        name="cargo"
+        placeholder="Cargo"
+        matInput
+        [(ngModel)]="funcionario.cargo"
+        >
+      </mat-form-field>
+      <mat-form-field>
+        <input
+        name="idade"
+        placeholder="Idade"
+        matInput
+        [(ngModel)]="funcionario.idade"
+        >
+      </mat-form-field>
+      <mat-form-field>
+        <input
+        name="salario"
+        placeholder="Salário (R$)"
+        matInput
+        [(ngModel)]="funcionario.salario"
+        >
+      </mat-form-field>
+      <mat-form-field>
+        <input
+        name="imgURL"
+        placeholder="Imagem de Perfil (URL)"
+        matInput
+        [(ngModel)]="funcionario.imgURL"
+        >
+      </mat-form-field>
+    </form>
+    
+    <button mat-raised-button (click)="editarFuncionario()" class="confirm">
+      Confirmar
+    </button>
+    
+    <button mat-raised-button (click)="cancel()" color="warn">
+      Cancelar
+    </button>
+  </mat-card>
+</div>

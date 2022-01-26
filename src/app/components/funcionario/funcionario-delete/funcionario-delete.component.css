@@ -1,0 +1,26 @@
+div {
+    display: flex;
+    justify-content: center;
+}
+.container {
+    margin-top: 15px;
+    width: 95%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    color: #093E64;
+}
+
+button {
+    margin-top: 15px;
+    margin-right: 10px;
+}
+
+.return {
+    color: #5AB575;
+}

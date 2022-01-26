@@ -1,4 +1,4 @@
-.box {
+.home {
     width: 95%;
     margin-left: 16px;
     margin-top: 15px;
@@ -8,6 +8,7 @@
     font-size: 3rem;
     font-weight: 300;
     line-height: 1.2;
+    color: #093E64;
 }
 
 .home .subtitle {

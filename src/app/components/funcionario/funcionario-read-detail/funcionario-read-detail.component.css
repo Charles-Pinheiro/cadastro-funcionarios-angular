@@ -30,7 +30,7 @@ button {
     height: 80%;
 }
 
-.card-tarefa {
+.card-funcionario {
     width: 300px;
     height: 300px;
     box-shadow: 3px 4px 15px 0;
@@ -74,8 +74,9 @@ a {
     text-decoration: none;
 }
 
-.done {
+.return {
     color: #5AB575;
+    margin-right: 3px;
 }
 
 .edit {

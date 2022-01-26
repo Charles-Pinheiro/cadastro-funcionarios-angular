@@ -21,6 +21,11 @@
     color: #FFF;
 }
 
+.header_icon {
+    margin-right: 5px;
+    margin-bottom: 2px;
+}
+
 .box-buttons {
     display: flex;
     width: 25%;

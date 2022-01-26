@@ -2,27 +2,28 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FuncionarioCrudComponent } from './views/funcionario-crud/funcionario-crud.component';
+import { HomeComponent } from './views/home/home.component';
+import { FuncionarioReadDetailComponent } from './components/funcionario/funcionario-read-detail/funcionario-read-detail.component';
+import { FuncionarioReadComponent } from './components/funcionario/funcionario-read/funcionario-read.component';
+import { FuncionarioDeleteComponent } from './components/funcionario/funcionario-delete/funcionario-delete.component';
+import { FuncionarioUpdateComponent } from './components/funcionario/funcionario-update/funcionario-update.component';
+import { FuncionarioCreateComponent } from './components/funcionario/funcionario-create/funcionario-create.component'
 import { HeaderComponent } from './components/template/header/header.component';
 import { FooterComponent } from './components/template/footer/footer.component';
-import { HomeComponent } from './views/home/home.component';
-import { FuncionarioCrudComponent } from './views/funcionario-crud/funcionario-crud.component';
-import { FuncionarioCreateComponent } from './components/funcionario/funcionario-create/funcionario-create.component'
 
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
-import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { FuncionarioReadComponent } from './components/funcionario/funcionario-read/funcionario-read.component';
 import { MatTableModule } from '@angular/material/table';
-import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatCardModule } from '@angular/material/card';
 import { MatSortModule } from '@angular/material/sort';
-import { FuncionarioReadDetailComponent } from './components/funcionario/funcionario-read-detail/funcionario-read-detail.component';
 
 @NgModule({
   declarations: [
@@ -33,13 +34,14 @@ import { FuncionarioReadDetailComponent } from './components/funcionario/funcion
     FuncionarioCrudComponent,
     FuncionarioCreateComponent,
     FuncionarioReadComponent,
-    FuncionarioReadDetailComponent
+    FuncionarioReadDetailComponent,
+    FuncionarioUpdateComponent,
+    FuncionarioDeleteComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatPaginatorModule,
     HttpClientModule,
     FormsModule,
     MatFormFieldModule,
@@ -47,8 +49,8 @@ import { FuncionarioReadDetailComponent } from './components/funcionario/funcion
     MatToolbarModule,
     MatButtonModule,
     MatInputModule,
-    MatCardModule,
     MatTableModule,
+    MatCardModule,
     MatSortModule,
   ],
   providers: [],
