@@ -28,4 +28,13 @@ export class FuncionarioService {
   create(funcionario: Funcionario): Observable<Funcionario> {
     return this.http.post<Funcionario>(this.baseURL, funcionario);
   }
+
+  read(): Observable<Funcionario[]> {
+    return this.http.get<Funcionario[]>(this.baseURL);
+  }
+
+  readById(id: number): Observable<Funcionario> {
+    const url = `${this.baseURL}/${id}`;
+    return this.http.get<Funcionario>(url);
+  }
 }

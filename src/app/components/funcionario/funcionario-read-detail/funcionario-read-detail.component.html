@@ -1,0 +1,27 @@
+<div class="box-cards">
+    <mat-card class="example-card card-tarefa">
+      <mat-card-header class="card-header">
+        <mat-card-title class="title-card">{{funcionario.nome}}</mat-card-title>
+        <mat-card-subtitle class="subtitle-card">Investimento: R${{funcionario.salario}}</mat-card-subtitle>
+      </mat-card-header>
+      <div class="box-image">
+        <img mat-card-image src="../../../../assets/img/Logo-SAT.png" alt="Photo of a Shiba Inu">
+      </div>
+      <mat-card-content>
+        <p>
+          Início:
+        </p>
+        <p>
+          Término:
+        </p>
+      </mat-card-content>
+      <mat-card-actions class="box-actions">
+          <a routerLink="/funcionarios" class="edit">
+            <i class="material-icons">edit</i>
+          </a>
+          <a routerLink="/funcionarios/" class="delete">
+            <i class="material-icons">delete</i>
+          </a>
+      </mat-card-actions>
+    </mat-card>
+  </div>

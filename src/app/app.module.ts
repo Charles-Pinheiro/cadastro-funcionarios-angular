@@ -18,6 +18,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { FuncionarioReadComponent } from './components/funcionario/funcionario-read/funcionario-read.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { FuncionarioReadDetailComponent } from './components/funcionario/funcionario-read-detail/funcionario-read-detail.component';
 
 @NgModule({
   declarations: [
@@ -26,12 +31,15 @@ import { MatInputModule } from '@angular/material/input';
     FooterComponent,
     HomeComponent,
     FuncionarioCrudComponent,
-    FuncionarioCreateComponent
+    FuncionarioCreateComponent,
+    FuncionarioReadComponent,
+    FuncionarioReadDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MatPaginatorModule,
     HttpClientModule,
     FormsModule,
     MatFormFieldModule,
@@ -40,6 +48,8 @@ import { MatInputModule } from '@angular/material/input';
     MatButtonModule,
     MatInputModule,
     MatCardModule,
+    MatTableModule,
+    MatSortModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
